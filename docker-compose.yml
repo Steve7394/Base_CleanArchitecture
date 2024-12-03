@@ -1,0 +1,29 @@
+services:
+  base.samples.endpoints.webapi:
+    image: ${DOCKER_REGISTRY-}basesamplesendpointswebapi
+    build:
+      context: .
+      dockerfile: samples/EndPoints/Base.Samples.EndPoints.WebApi/Dockerfile
+    environment:
+      - DOTNET_CLI_TELEMETRY_OPTOUT=true
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: postgres
+    image: postgres:14-alpine
+    ports:
+      - 0.0.0.0:5432:5432
+    volumes:
+      - type: volume
+        source: postgresdata
+        target: /var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+
+
+volumes:
+  postgresdata:

@@ -1,8 +1,9 @@
-﻿using Base.Infrastructure.SqlContext;
+﻿using Base.Infrastructure.PostgreSQL;
+using Base.Infrastructure.SqlContext;
 
 namespace Base.Samples.Infrastructure.Common;
 
-public class SampleDbContext : BaseDbContext
+public class SampleDbContext : PostgreSqlDbContext
 {
     public DbSet<Person> People { get; set; }
     public SampleDbContext(DbContextOptions<SampleDbContext> options) : base(options)

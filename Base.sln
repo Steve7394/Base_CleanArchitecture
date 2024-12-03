@@ -65,6 +65,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Infra.Validators", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Infra.Validators.Abstractions", "src\Infra\Validators\Base.Infra.Validators.Abstractions\Base.Infra.Validators.Abstractions\Base.Infra.Validators.Abstractions.csproj", "{126AA17D-2825-4188-9276-E7251E77736A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Infrastructure.PostgreSQL", "src\Infra\Data\Base.Infrastructure.PostgreSQL\Base.Infrastructure.PostgreSQL.csproj", "{B599DA4D-5D02-4DEC-8F9C-D0A86EBF4E59}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{15DB40F5-FD2F-4B57-8B3C-95F03D125740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +143,14 @@ Global
 		{126AA17D-2825-4188-9276-E7251E77736A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{126AA17D-2825-4188-9276-E7251E77736A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{126AA17D-2825-4188-9276-E7251E77736A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B599DA4D-5D02-4DEC-8F9C-D0A86EBF4E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B599DA4D-5D02-4DEC-8F9C-D0A86EBF4E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B599DA4D-5D02-4DEC-8F9C-D0A86EBF4E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B599DA4D-5D02-4DEC-8F9C-D0A86EBF4E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15DB40F5-FD2F-4B57-8B3C-95F03D125740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DB40F5-FD2F-4B57-8B3C-95F03D125740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DB40F5-FD2F-4B57-8B3C-95F03D125740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DB40F5-FD2F-4B57-8B3C-95F03D125740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,6 +185,8 @@ Global
 		{484F765B-CC83-40EF-A22C-2F6780B74404} = {07A00EFC-A4BB-4785-9990-9F6F4886E820}
 		{D5893BFF-EE9B-460B-9465-BE4B08197608} = {484F765B-CC83-40EF-A22C-2F6780B74404}
 		{126AA17D-2825-4188-9276-E7251E77736A} = {484F765B-CC83-40EF-A22C-2F6780B74404}
+		{B599DA4D-5D02-4DEC-8F9C-D0A86EBF4E59} = {61C6C818-9EE5-4BC0-8A89-A839F82C378E}
+		{15DB40F5-FD2F-4B57-8B3C-95F03D125740} = {685FC6B7-BA0E-42AB-8C8F-B742E3A430EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D5D58CA-317E-4A1C-BD21-D8E928B9B245}
