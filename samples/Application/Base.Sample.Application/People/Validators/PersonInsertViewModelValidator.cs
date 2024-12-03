@@ -1,4 +1,5 @@
 ﻿using Base.Infra.Validators.Abstractions.Abstractions;
+using FluentValidation.Validators;
 
 namespace Base.Sample.Application.People.Validators;
 

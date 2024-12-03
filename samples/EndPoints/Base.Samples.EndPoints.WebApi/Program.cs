@@ -1,4 +1,3 @@
-using Base.Infrastructure.PostgreSQL;
 using Base.Sample.Application.People.Validators;
 using Base.Sample.BackgroundWorker.LocationService;
 
@@ -15,7 +14,7 @@ builder.Services.AddBaseAutoMapperProfiles(option =>
     option.AssemblyNamesForLoadProfiles = builder.Configuration["AutoMapper:AssmblyNamesForLoadProfiles"];
 });
 
-builder.Services.AddDbContext<PostgreSqlDbContext, SampleDbContext>(
+builder.Services.AddDbContext<BaseDbContext, SampleDbContext>(
     c => c.UseNpgsql(builder.Configuration.GetConnectionString("BaseConnectionString"), options =>
     {
         options.MigrationsAssembly(typeof(SampleDbContext).Assembly.GetName().Name);
@@ -25,7 +24,7 @@ builder.Services.AddSwagger(builder.Configuration, "Swagger");
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<SampleDbContext>();
+    var context = scope.ServiceProvider.GetRequiredService<BaseDbContext>();
     if (!await context.Database.CanConnectAsync())
     {
         await context.Database.MigrateAsync();
